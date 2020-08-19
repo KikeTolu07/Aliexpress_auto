@@ -12,7 +12,7 @@ jobs:
       - run:
           name: Install requests
           command: |
-            sudo pip install -r requirements.txt
+            sudo pip install -r requirement.txt
 
 
       - run:
