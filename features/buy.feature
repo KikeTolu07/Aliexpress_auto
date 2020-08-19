@@ -25,7 +25,7 @@ Feature: Guest Shopping
 
 
 
-      Scenario: Guest shopping on Aliexpress
+  Scenario: Guest shopping on ebay
 
     Given I am on "ebay" site
 
@@ -38,6 +38,22 @@ Feature: Guest Shopping
     When I proceed to check out on "ebay"
 
     Then I should be redirected to "ebay" sign in page
+
+
+
+#  Scenario: Guest shopping on Jumia
+#
+#    Given I am on "ebay" site
+#
+#      And I search and click on an item on "ebay"
+#
+#      And I select an item on "ebay"
+#
+#      And I added the "ebay" item to cart
+#
+#    When I proceed to check out on "ebay"
+#
+#    Then I should be redirected to "ebay" sign in page
 
 
 
