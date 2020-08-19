@@ -47,6 +47,7 @@ class GuestShopper:
 
 
     def add_to_cart(self, add, new):
+        WebDriverWait(self.site.driver, 20).until(EC.visibility_of_element_located((By.CSS_SELECTOR, add)))
         self.site.driver.find_element_by_css_selector(add).click()
         WebDriverWait(self.site.driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR, new)))
 

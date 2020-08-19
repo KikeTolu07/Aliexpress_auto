@@ -29,8 +29,10 @@ def step_impl(context, text):
 @step('I select an item on "{text}"')
 def step_impl(context, text):
     if text == "Aliexpress":
-        test.close_popup()
-        test.scroll_page()
+        try:
+            test.close_popup()
+        except:
+            test.scroll_page()
         test.select_item(source.ali_select_item)
     elif text == "ebay":
         test.select_item(source.ebay_select_item)
