@@ -11,4 +11,4 @@ class Drive:
 
     def launch_site(self, url):
         self.driver.get(url)
-        self.driver.maximize_window()
+        # self.driver.maximize_window()
