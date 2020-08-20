@@ -30,6 +30,7 @@ class GuestShopper:
         self.site.driver.execute_script("window.scrollTo(0, 1000)")
 
     def select_item(self, pick):
+        WebDriverWait(self.site.driver, 50).until(EC.visibility_of_element_located((By.CSS_SELECTOR, pick)))
         self.site.driver.find_element_by_css_selector(pick).click()
 
     def scroll(self):
